@@ -1,0 +1,26 @@
+name: Blog Template
+type: theme
+description: 'Blog subtheme'
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: bootstrap4
+
+# Stylesheets.
+# stylesheets-remove:
+#   - '@bootstrap4/css/style.css'
+
+# Libraries.
+libraries:
+  - blog_template/global-styling
+  - blog_template/fontawesome
+
+# Regions.
+regions:
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  header: Banner
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer

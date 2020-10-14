@@ -1,0 +1,34 @@
+<?php
+
+ /**
+  * Override or insert variables into the page template.
+  */
+ function blog_template_preprocess_page(&$vars) {
+   $vars['background_image'] = '';
+   if (isset($vars['node'])) {
+     $type = $vars['node']->get('type')->getValue();
+     // Is this a node, and of the right type.
+     if($type[0]['target_id'] == 'page') {
+       if (isset($vars['node']->field_header_image)) {
+         // Populate a variable we can print in the page template.
+         $image = $vars['node']->get('field_header_image')->getValue();
+         $file = \Drupal\file\Entity\File::load($image[0]['target_id'])->getFileUri();
+         $vars['background_image'] = file_create_url($file);
+       }
+     }
+     elseif (isset($vars['node']) && $type[0]['target_id'] == 'blog') {
+       if (isset($vars['node']->field_blog_image)) {
+         $image = $vars['node']->get('field_blog_image')->getValue();
+         $file = \Drupal\file\Entity\File::load($image[0]['target_id'])->getFileUri();
+         $vars['background_image'] = file_create_url($file);
+       }
+   }
+   elseif (isset($vars['node']) && $type[0]['target_id'] == 'contact_us') {
+     if (isset($vars['node']->field_contact_banner_image)) {
+       $image = $vars['node']->get('field_contact_banner_image')->getValue();
+       $file = \Drupal\file\Entity\File::load($image[0]['target_id'])->getFileUri();
+       $vars['background_image'] = file_create_url($file);
+     }
+   }
+ }
+}
