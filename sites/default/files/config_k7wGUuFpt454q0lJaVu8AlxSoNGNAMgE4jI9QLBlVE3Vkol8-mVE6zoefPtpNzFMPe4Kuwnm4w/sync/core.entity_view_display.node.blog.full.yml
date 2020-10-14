@@ -1,0 +1,31 @@
+uuid: f59d140e-14ac-4b53-9297-e42b2c68f569
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.blog.body
+    - field.field.node.blog.field_blog_image
+    - node.type.blog
+  module:
+    - text
+    - user
+id: node.blog.full
+targetEntityType: node
+bundle: blog
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_blog_image: true

@@ -1,0 +1,22 @@
+uuid: 783e7cc7-4b8e-4565-bd3b-06201b973e4b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - blog_template
+_core:
+  default_config_hash: tZtWC6EKIYALVtpV4mPz79GsLZD6IFWb7Wk1B7Rd8Go
+id: blog_template_messages
+theme: blog_template
+region: content
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,33 @@
+uuid: ee131b0c-1049-471e-a51a-4ff5ce6511b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.banner_image
+  module:
+    - node
+    - views
+  theme:
+    - blog_template
+id: views_block__banner_image_block_1
+theme: blog_template
+region: header
+weight: -5
+provider: null
+plugin: 'views_block:banner_image-block_1'
+settings:
+  id: 'views_block:banner_image-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

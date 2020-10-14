@@ -1,0 +1,21 @@
+uuid: 1d50e1d4-6c5f-4f53-be1c-97b3b5f63d33
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: 'Send message'
+    show_preview: false
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+    page_autoreply_format: plain_text
+id: contact_us_form
+label: 'Contact us'
+recipients:
+  - nitinlama8953@gmail.com
+reply: ''
+weight: 0
+message: ''
+redirect: ''

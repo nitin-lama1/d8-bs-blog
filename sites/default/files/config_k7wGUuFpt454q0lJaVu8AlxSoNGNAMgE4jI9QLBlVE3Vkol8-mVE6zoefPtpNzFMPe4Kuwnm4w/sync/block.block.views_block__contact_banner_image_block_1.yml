@@ -1,0 +1,33 @@
+uuid: 9eb0d2a0-5753-49a6-bede-98b4ac1e758e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.contact_banner_image
+  module:
+    - node
+    - views
+  theme:
+    - blog_template
+id: views_block__contact_banner_image_block_1
+theme: blog_template
+region: header
+weight: 0
+provider: null
+plugin: 'views_block:contact_banner_image-block_1'
+settings:
+  id: 'views_block:contact_banner_image-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      contact_us: contact_us
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

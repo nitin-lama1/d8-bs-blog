@@ -1,0 +1,22 @@
+uuid: 019cd6b8-fc15-48e3-8d39-bdd582620d8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - blog_template
+_core:
+  default_config_hash: aJ6ps0sJm9MtQffqINgRms1JaSQgjsg68REaPdN-BGk
+id: blog_template_content
+theme: blog_template
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
